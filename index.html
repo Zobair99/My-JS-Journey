@@ -12,101 +12,57 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h5 class="center">What do you want to do?</ph5>
+                <h5 class="center">Select an operation and click on Go!</ph5>
             </div>
             <div class="card-content">
                 <div class="row">
                     <div class="col s12 m12 l12 input-field">
-                        <input type="text" id="inp_res">
-                        
-                    </div>
 
-                </div>
-                <div class="row">
-
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn7" value="7">
-                    </div>
-
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn8" value="8">
-                    </div>
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col col s12 m12 l12" id="btn9" value="9">
-                    </div>
-                    <div class="col s3 m3 l3">
-                        <div class="col s12 m12 l12 ">
-                            <input type="button" class="btn col s12 m12 l12" id="btnClear" value="C">
-                        </div>
-                    </div>
+<!-- Add new Option with your desired Operation name and value -->
 
 
-                </div>
-                <div class="row">
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn4" value="4">
-                    </div>
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn5" value="5">
-                    </div>
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn6" value="6">
-                    </div>
-
-                    <div class="col s3 m3 l3">
-                        <div class="col s6 m6 l6">
-                            <input type="button" class="btn col s12 m12 l12" id="btnplus" value="+">
-                        </div>
-                        <div class="col s6 m6 l6">
-                            <input type="button" class="btn col s12 m12 l12" id="btnminus" value="-">
-                        </div>
+                        <select id="ops">
+                            <option value="" disabled selected>Choose your operation</option>
+                            <option value="plus">+</option>
+                            <option value="minus">-</option>
+                            <option value="multi">x</option>
+                            <option value="devide">÷</option>
+                            <option value="square">√</option>
+                            <option value="power">Nⁿ</option>
+                            <option value="percentage">%</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn1" value="1">
+                    <div class="col s5 m5 l5 input-field">
+                        <input type="text" id="num1" placeholder="Number 1">
                     </div>
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn2" value="2">
+                    <div class="col s5 m5 l5 input-field">
+                        <input type="text" id="num2" placeholder="Number 2">
                     </div>
-
-                    <div class="col s3 m3 l3">
-                        <input type="button" class="btn col s12 m12 l12" id="btn3" value="3">
-                    </div>
-                    <div class="col s3 m3 l3">
-                        <div class="col s6 m6 l6">
-                            <input type="button" class="btn col s12 m12 l12" id="btnMulti" value="x">
-                        </div>
-                        <div class="col s6 m6 l6">
-                            <input type="button" class="btn col s12 m12 l12" id="btndevide" value="/">
-                        </div>
+                    <div class="col s2 m2 l2">
+                        <input type="button" id="execute" value="Go!" onclick="executeAction()" class="btn col s12 m12 l12">
                     </div>
                 </div>
-
                 <div class="row">
-                    <div class="col s9 m9 l9">
-                        <input type="button" class="btn col s6 m6 l6" id="btnresult" value="=">                        
-                        <input type="button" class="btn col s6 m6 l6" id="btn0" value="0">
+                    <div class="col s10 m10 l10 input-field">
+                        <input type="text" id="zobiResult" placeholder="Result" readonly="readonly">
                     </div>
-                    <div class="col s3 m3 l3">
-                        <div class="col s6 m6 l6">
-                            <input type="button" class="btn col s12 m12 l12" id="btnpotenz" value="n²">
-                        </div>
-                        <div class="col s6 m6 l6">
-                                <input type="button" class="btn col s12 m12 l12" id="btnsquare" value="√">
-                            </div>
+                    <div class="col s2 m2 l2 input-field">
+                        <input type="button" id="btnClear" class="btn col s12 m12 l12" value="C">
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>
     </div>
 
-    
-</div>
-<script src="js/app.js"></script>
-<script src="js/getNumbers.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    </div>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 
 </html>
