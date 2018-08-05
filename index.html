@@ -4,15 +4,19 @@
     <title>
         My Super Calculator
     </title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="card">
+        <div class="card my">
             <div class="card-header">
-                <h5 class="center">Select an operation and click on Go!</ph5>
+                <br>
+                <h5 class="center">Select an operation and click the green button</ph5>
             </div>
             <div class="card-content">
                 <div class="row">
@@ -22,7 +26,7 @@
 
 
                         <select id="ops">
-                            <option value="" disabled selected>Choose your operation</option>
+                            <option value="blank" disabled selected>Choose your operation</option>
                             <option value="plus">+</option>
                             <option value="minus">-</option>
                             <option value="multi">x</option>
@@ -41,7 +45,9 @@
                         <input type="text" id="num2" placeholder="Number 2">
                     </div>
                     <div class="col s2 m2 l2">
-                        <input type="button" id="execute" value="Go!" onclick="executeAction()" class="btn col s12 m12 l12">
+                        <a id="execute" value="Calculate" onclick="executeAction()" class="btn-floating btn-large green">
+                            <i class="material-icons">send</i>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
@@ -49,7 +55,9 @@
                         <input type="text" id="zobiResult" placeholder="Result" readonly="readonly">
                     </div>
                     <div class="col s2 m2 l2 input-field">
-                        <input type="button" id="btnClear" class="btn col s12 m12 l12" value="C">
+                        <a id="btnClear" class="btn-floating btn-large green ">
+                            <i class="material-icons">delete</i>
+                        </a>
                     </div>
 
                 </div>
